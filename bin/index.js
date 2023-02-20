@@ -33,7 +33,13 @@ const Template: ComponentStory<typeof ${componentName}> = (args) => (
 
 export const Default = Template.bind({})
 `
-fs.writeFile(`./${path}/${componentName}.stories.tsx`, content, err => {
+
+const firstLetter = componentName[0].toLowerCase()
+const lastpart = componentName.slice(1).replace(/([A-Z])/g, (match) => `-${match.toLowerCase()}`)
+const fileName = firstLetter + lastpart
+
+
+fs.writeFile(`./${path}/${fileName}.stories.tsx`, content, err => {
   if (err) {
     console.error(err)
   }
