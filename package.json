@@ -1,0 +1,14 @@
+{
+  "name": "vanbonn-sbr",
+  "version": "1.0.3",
+  "description": "creates Storybook stories for a React component",
+  "main": "/bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vanbonn-sbr": "./bin/index.js"
+  },
+  "author": "Nathan Van Bonn",
+  "license": "ISC"
+}
