@@ -1,6 +1,6 @@
 {
   "name": "vanbonn-sbr",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "creates Storybook stories for a React component",
   "main": "/bin/index.js",
   "scripts": {

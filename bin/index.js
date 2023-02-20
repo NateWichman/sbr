@@ -39,6 +39,7 @@ const lastpart = componentName.slice(1).replace(/([A-Z])/g, (match) => `-${match
 const fileName = firstLetter + lastpart
 
 
+
 fs.writeFile(`./${path}/${fileName}.stories.tsx`, content, err => {
   if (err) {
     console.error(err)
