@@ -45,5 +45,5 @@ fs.writeFile(`./${path}/${fileName}.stories.tsx`, content, err => {
     console.error(err)
   }
 
-  console.log('\x1b[35m', 'Created Story for ' + componentName + ' successfully. <3')
+  console.log('\x1b[35m', 'Created Story for ' + componentName + ' successfully. - 🦐')
 })
