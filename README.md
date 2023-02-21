@@ -1,5 +1,5 @@
 # React Story Generator
-Helps create stories for react components
+Helps create stories for react components for StoryBook
 
 ## USAGE
 
