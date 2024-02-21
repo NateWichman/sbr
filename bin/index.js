@@ -13,21 +13,21 @@ const path = args[1] || ''
 
 const content = `
 import React from "react"
-import { ComponentMeta, ComponentStory } from "@storybook/react"
+import { Meta, StoryFn } from '@storybook/react'
 
 import { ${componentName} } from "./${componentName.toLowerCase()}"
 
-const story: ComponentMeta<typeof ${componentName}> = {
+const story: Meta<typeof ${componentName}> = {
     title: "Components/${componentName}",
     component: ${componentName},
     argTypes: {
     },
     parameters: {
     },
-  } as ComponentMeta<typeof ${componentName}>
+  } as Meta<typeof ${componentName}>
 export default story
 
-const Template: ComponentStory<typeof ${componentName}> = (args) => (
+const Template: StoryFn<typeof ${componentName}> = (args) => (
     <${componentName} {...args}></${componentName}>
   )
 
@@ -43,7 +43,7 @@ const fileName = firstLetter + lastpart
 fs.writeFile(`./${path}/${fileName}.stories.tsx`, content, err => {
   if (err) {
     console.error(err)
+  } else {
+    console.log('\x1b[35m', 'Created Story for ' + componentName + ' successfully. - 🦐')
   }
-
-  console.log('\x1b[35m', 'Created Story for ' + componentName + ' successfully. - 🦐')
 })
